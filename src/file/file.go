@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"os"
+	"io"
 )
 
 func main() {
@@ -12,10 +13,22 @@ func main() {
 	fileName := "file.txt"
 	file := arquivo(fileName)
 
-	bufio.NewReader(file)
+	reader := bufio.NewReader(file)
+
+	for {
+
+		line, err := reader.ReadString('\n')
+		println(line)
+
+		if err == io.EOF {
+			break
+		}
+
+	}
 
 	println("Finalizando processo de leitura de arquivo")
-
+	
+	file.Close()
 }
 
 func arquivo(fileName string) *os.File {

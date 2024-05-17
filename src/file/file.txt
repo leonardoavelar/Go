@@ -1,4 +1,4 @@
-https://wwww.alura.com.br
-https://wwww.itau.com.br
-https://wwww.terra.com.br
-https://wwww.netflix.com.br
+https://www.alura.com.br;alura
+https://www.terra.com.br;terra
+https://www.netflix.com/br/;netflix
+http://localhost:5109/Weather;weather
